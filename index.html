@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Redirecting...</title>
+  <script type="text/javascript">
+    console.log('Redirecting based on platform...');
+
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    const isIOS = /iPad|iPhone|iPod/.test(userAgent);
+    const isAndroid = /Android/.test(userAgent);
+    const isMobile = isIOS || isAndroid;
+
+    console.log('navigator.userAgent', navigator.userAgent);
+
+    if (isIOS || isAndroid) {
+      //  window.location.href = 'https://testflight.apple.com/join/0Es0xGHa';
+      window.location.href = 'https://roompot.onelink.me/dPMe/appstoreredirect';
+    } else {
+      // Desktop fallback — change this to wherever you want desktop users to go
+      window.location.href = 'https://www.roompot.nl';
+    }
+  </script>
+</head>
+
+<body></body>
+
+</html>
